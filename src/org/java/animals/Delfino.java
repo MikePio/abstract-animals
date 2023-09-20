@@ -1,6 +1,8 @@
 package org.java.animals;
 
-public class Delfino extends Animale{
+import org.java.animals.interfaces.INuotante;
+
+public class Delfino extends Animale implements INuotante {
 
   public Delfino(String nome, int numZampe){
     super(nome, numZampe);
@@ -23,6 +25,12 @@ public class Delfino extends Animale{
   public void mangia(){
     System.out.println("Il delfino sta magiando");
   } 
+
+    //* personalizzato metodo dell'interfaccia
+    @Override
+    public void nuota() {
+      System.out.println("Sto nuotando!!!");
+    }
 }
 
 

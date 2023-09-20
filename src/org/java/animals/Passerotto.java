@@ -1,6 +1,8 @@
 package org.java.animals;
 
-public class Passerotto extends Animale{
+import org.java.animals.interfaces.IVolante;
+
+public class Passerotto extends Animale implements IVolante{
 
   public Passerotto(String nome, int numZampe){
     super(nome, numZampe);
@@ -24,4 +26,10 @@ public class Passerotto extends Animale{
     System.out.println("Il passerotto sta magiando");
   }
 
+  //* personalizzato metodo dell'interfaccia
+  @Override
+  public void vola() {
+    System.out.println("Sto volando!!!");
+  }
+  
 }

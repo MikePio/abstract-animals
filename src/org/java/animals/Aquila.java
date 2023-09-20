@@ -1,6 +1,8 @@
 package org.java.animals;
 
-public class Aquila extends Animale{
+import org.java.animals.interfaces.IVolante;
+
+public class Aquila extends Animale implements IVolante{
 
   public Aquila(String nome, int numZampe){
     super(nome, numZampe);
@@ -24,5 +26,11 @@ public class Aquila extends Animale{
   public void mangia(){
     System.out.println("L'aquila sta magiando");
   }
+
+  //* personalizzato metodo dell'interfaccia
+  @Override
+	public void vola() {
+		System.out.println("Sto volando!!!");
+	}
 
 }
